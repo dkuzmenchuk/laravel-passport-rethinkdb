@@ -2,7 +2,7 @@
 
 namespace Laravel\Passport;
 
-use Illuminate\Database\Eloquent\Model;
+use dkuzmenchuk\RethinkDB\Eloquent\Model;
 
 class Client extends Model
 {

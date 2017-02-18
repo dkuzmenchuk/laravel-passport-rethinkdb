@@ -3,7 +3,7 @@
 namespace Laravel\Passport;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Model;
+use dkuzmenchuk\RethinkDB\Eloquent\Model;
 
 class TokenRepository
 {
