@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport\Events;
+namespace dkuzmenchuk\PassportRethinkDB\Events;
 
 class RefreshTokenCreated
 {

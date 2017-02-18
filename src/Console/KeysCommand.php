@@ -1,9 +1,9 @@
 <?php
 
-namespace Laravel\Passport\Console;
+namespace dkuzmenchuk\PassportRethinkDB\Console;
 
 use phpseclib\Crypt\RSA;
-use Laravel\Passport\Passport;
+use dkuzmenchuk\PassportRethinkDB\Passport;
 use Illuminate\Console\Command;
 
 class KeysCommand extends Command

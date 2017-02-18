@@ -1,9 +1,9 @@
 <?php
 
-namespace Laravel\Passport\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
 
-use Laravel\Passport\Passport;
-use Laravel\Passport\TokenRepository;
+use dkuzmenchuk\PassportRethinkDB\Passport;
+use dkuzmenchuk\PassportRethinkDB\TokenRepository;
 use Lcobucci\JWT\Parser as JwtParser;
 use Zend\Diactoros\Response as Psr7Response;
 use Psr\Http\Message\ServerRequestInterface;

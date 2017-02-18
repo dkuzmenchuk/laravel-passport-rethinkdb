@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravel\Passport\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Laravel\Passport\Client;
-use Laravel\Passport\ClientRepository;
+use dkuzmenchuk\PassportRethinkDB\Client;
+use dkuzmenchuk\PassportRethinkDB\ClientRepository;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 

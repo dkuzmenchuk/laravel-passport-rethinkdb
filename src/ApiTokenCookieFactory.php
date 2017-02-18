@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport;
+namespace dkuzmenchuk\PassportRethinkDB;
 
 use Carbon\Carbon;
 use Firebase\JWT\JWT;

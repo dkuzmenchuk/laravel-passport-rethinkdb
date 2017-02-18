@@ -1,9 +1,9 @@
 <?php
 
-namespace Laravel\Passport\Http\Middleware;
+namespace dkuzmenchuk\PassportRethinkDB\Http\Middleware;
 
 use Illuminate\Auth\AuthenticationException;
-use Laravel\Passport\Exceptions\MissingScopeException;
+use dkuzmenchuk\PassportRethinkDB\Exceptions\MissingScopeException;
 
 class CheckScopes
 {

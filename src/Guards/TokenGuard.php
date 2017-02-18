@@ -1,16 +1,16 @@
 <?php
 
-namespace Laravel\Passport\Guards;
+namespace dkuzmenchuk\PassportRethinkDB\Guards;
 
 use Exception;
 use Firebase\JWT\JWT;
-use Laravel\Passport\Token;
+use dkuzmenchuk\PassportRethinkDB\Token;
 use Illuminate\Http\Request;
-use Laravel\Passport\Passport;
+use dkuzmenchuk\PassportRethinkDB\Passport;
 use Illuminate\Container\Container;
-use Laravel\Passport\TransientToken;
-use Laravel\Passport\TokenRepository;
-use Laravel\Passport\ClientRepository;
+use dkuzmenchuk\PassportRethinkDB\TransientToken;
+use dkuzmenchuk\PassportRethinkDB\TokenRepository;
+use dkuzmenchuk\PassportRethinkDB\ClientRepository;
 use League\OAuth2\Server\ResourceServer;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Encryption\Encrypter;

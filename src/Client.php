@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport;
+namespace dkuzmenchuk\PassportRethinkDB;
 
 use dkuzmenchuk\RethinkDB\Eloquent\Model;
 

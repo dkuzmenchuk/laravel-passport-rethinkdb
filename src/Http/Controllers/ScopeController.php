@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravel\Passport\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
 
-use Laravel\Passport\Passport;
+use dkuzmenchuk\PassportRethinkDB\Passport;
 
 class ScopeController
 {

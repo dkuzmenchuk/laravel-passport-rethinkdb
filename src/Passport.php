@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport;
+namespace dkuzmenchuk\PassportRethinkDB;
 
 use Mockery;
 use DateInterval;
@@ -108,7 +108,7 @@ class Passport
 
         $defaultOptions = [
             'prefix' => 'oauth',
-            'namespace' => '\Laravel\Passport\Http\Controllers',
+            'namespace' => '\dkuzmenchuk\PassportRethinkDB\Http\Controllers',
         ];
 
         $options = array_merge($defaultOptions, $options);

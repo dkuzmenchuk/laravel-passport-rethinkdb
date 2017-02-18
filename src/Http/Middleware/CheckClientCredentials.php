@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport\Http\Middleware;
+namespace dkuzmenchuk\PassportRethinkDB\Http\Middleware;
 
 use Closure;
 use League\OAuth2\Server\ResourceServer;
