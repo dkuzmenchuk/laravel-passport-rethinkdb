@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport\Exceptions;
+namespace dkuzmenchuk\PassportRethinkDB\Exceptions;
 
 use Illuminate\Auth\Access\AuthorizationException;
 

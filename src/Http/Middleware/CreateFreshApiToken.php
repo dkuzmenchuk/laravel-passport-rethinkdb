@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravel\Passport\Http\Middleware;
+namespace dkuzmenchuk\PassportRethinkDB\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Response;
-use Laravel\Passport\Passport;
-use Laravel\Passport\ApiTokenCookieFactory;
+use dkuzmenchuk\PassportRethinkDB\Passport;
+use dkuzmenchuk\PassportRethinkDB\ApiTokenCookieFactory;
 
 class CreateFreshApiToken
 {

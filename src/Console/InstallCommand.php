@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport\Console;
+namespace dkuzmenchuk\PassportRethinkDB\Console;
 
 use Illuminate\Console\Command;
 

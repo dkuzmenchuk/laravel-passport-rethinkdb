@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravel\Passport\Bridge;
+namespace dkuzmenchuk\PassportRethinkDB\Bridge;
 
 use DateTime;
-use Laravel\Passport\TokenRepository;
+use dkuzmenchuk\PassportRethinkDB\TokenRepository;
 use Illuminate\Contracts\Events\Dispatcher;
-use Laravel\Passport\Events\AccessTokenCreated;
+use dkuzmenchuk\PassportRethinkDB\Events\AccessTokenCreated;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Entities\AccessTokenEntityInterface;
 use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;

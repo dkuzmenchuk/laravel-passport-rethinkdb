@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Passport\Bridge;
+namespace dkuzmenchuk\PassportRethinkDB\Bridge;
 
 use DateInterval;
 use Psr\Http\Message\ServerRequestInterface;

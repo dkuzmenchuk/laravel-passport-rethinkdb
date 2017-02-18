@@ -1,8 +1,8 @@
 <?php
 
-namespace Laravel\Passport\Bridge;
+namespace dkuzmenchuk\PassportRethinkDB\Bridge;
 
-use Laravel\Passport\Passport;
+use dkuzmenchuk\PassportRethinkDB\Passport;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Repositories\ScopeRepositoryInterface;
 
