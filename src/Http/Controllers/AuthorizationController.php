@@ -7,7 +7,7 @@ use dkuzmenchuk\PassportRethinkdb\Passport;
 use dkuzmenchuk\PassportRethinkdb\Bridge\User;
 use dkuzmenchuk\PassportRethinkdb\TokenRepository;
 use dkuzmenchuk\PassportRethinkdb\ClientRepository;
-use Illuminate\Database\Eloquent\Model;
+use dkuzmenchuk\RethinkDB\Eloquent\Model;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response as Psr7Response;
 use League\OAuth2\Server\AuthorizationServer;

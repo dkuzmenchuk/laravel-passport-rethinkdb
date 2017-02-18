@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use dkuzmenchuk\PassportRethinkdb\Client;
 use dkuzmenchuk\PassportRethinkdb\ClientRepository;
-use Illuminate\Database\Eloquent\Model;
+use dkuzmenchuk\RethinkDB\Eloquent\Model;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 
 class ClientController

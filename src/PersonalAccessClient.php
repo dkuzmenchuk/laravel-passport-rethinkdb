@@ -2,7 +2,7 @@
 
 namespace dkuzmenchuk\PassportRethinkdb;
 
-use Illuminate\Database\Eloquent\Model;
+use dkuzmenchuk\RethinkDB\Eloquent\Model;
 
 class PersonalAccessClient extends Model
 {

@@ -3,7 +3,7 @@
 namespace dkuzmenchuk\PassportRethinkdb\Http\Controllers;
 
 use Exception;
-use Illuminate\Database\Eloquent\Model;
+use dkuzmenchuk\RethinkDB\Eloquent\Model;
 use Illuminate\Http\Request;
 use dkuzmenchuk\PassportRethinkdb\Bridge\User;
 
