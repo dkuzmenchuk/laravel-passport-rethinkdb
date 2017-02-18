@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Console;
+namespace dkuzmenchuk\PassportRethinkdb\Console;
 
 use Illuminate\Console\Command;
 

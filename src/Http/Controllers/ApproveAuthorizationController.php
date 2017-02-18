@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Zend\Diactoros\Response as Psr7Response;

@@ -1,10 +1,10 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use dkuzmenchuk\PassportRethinkDB\ApiTokenCookieFactory;
+use dkuzmenchuk\PassportRethinkdb\ApiTokenCookieFactory;
 
 class TransientTokenController
 {

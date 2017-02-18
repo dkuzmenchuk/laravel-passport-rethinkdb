@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB;
+namespace dkuzmenchuk\PassportRethinkdb;
 
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Arrayable;

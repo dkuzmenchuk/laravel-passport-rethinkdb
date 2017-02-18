@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB;
+namespace dkuzmenchuk\PassportRethinkdb;
 
 use Mockery;
 use DateInterval;
@@ -108,7 +108,7 @@ class Passport
 
         $defaultOptions = [
             'prefix' => 'oauth',
-            'namespace' => '\dkuzmenchuk\PassportRethinkDB\Http\Controllers',
+            'namespace' => '\dkuzmenchuk\PassportRethinkdb\Http\Controllers',
         ];
 
         $options = array_merge($defaultOptions, $options);

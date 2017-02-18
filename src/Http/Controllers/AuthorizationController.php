@@ -1,12 +1,12 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Controllers;
 
 use Illuminate\Http\Request;
-use dkuzmenchuk\PassportRethinkDB\Passport;
-use dkuzmenchuk\PassportRethinkDB\Bridge\User;
-use dkuzmenchuk\PassportRethinkDB\TokenRepository;
-use dkuzmenchuk\PassportRethinkDB\ClientRepository;
+use dkuzmenchuk\PassportRethinkdb\Passport;
+use dkuzmenchuk\PassportRethinkdb\Bridge\User;
+use dkuzmenchuk\PassportRethinkdb\TokenRepository;
+use dkuzmenchuk\PassportRethinkdb\ClientRepository;
 use Illuminate\Database\Eloquent\Model;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response as Psr7Response;

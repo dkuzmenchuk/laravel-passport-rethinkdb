@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB;
+namespace dkuzmenchuk\PassportRethinkdb;
 
 use Zend\Diactoros\Response;
 use Zend\Diactoros\ServerRequest;

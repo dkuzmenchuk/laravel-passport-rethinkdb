@@ -1,11 +1,11 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Controllers;
 
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use dkuzmenchuk\PassportRethinkDB\Bridge\User;
+use dkuzmenchuk\PassportRethinkdb\Bridge\User;
 
 trait RetrievesAuthRequestFromSession
 {

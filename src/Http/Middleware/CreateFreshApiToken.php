@@ -1,11 +1,11 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Middleware;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Response;
-use dkuzmenchuk\PassportRethinkDB\Passport;
-use dkuzmenchuk\PassportRethinkDB\ApiTokenCookieFactory;
+use dkuzmenchuk\PassportRethinkdb\Passport;
+use dkuzmenchuk\PassportRethinkdb\ApiTokenCookieFactory;
 
 class CreateFreshApiToken
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Guards;
+namespace dkuzmenchuk\PassportRethinkdb\Guards;
 
 use Exception;
 use Firebase\JWT\JWT;
-use dkuzmenchuk\PassportRethinkDB\Token;
+use dkuzmenchuk\PassportRethinkdb\Token;
 use Illuminate\Http\Request;
-use dkuzmenchuk\PassportRethinkDB\Passport;
+use dkuzmenchuk\PassportRethinkdb\Passport;
 use Illuminate\Container\Container;
-use dkuzmenchuk\PassportRethinkDB\TransientToken;
-use dkuzmenchuk\PassportRethinkDB\TokenRepository;
-use dkuzmenchuk\PassportRethinkDB\ClientRepository;
+use dkuzmenchuk\PassportRethinkdb\TransientToken;
+use dkuzmenchuk\PassportRethinkdb\TokenRepository;
+use dkuzmenchuk\PassportRethinkdb\ClientRepository;
 use League\OAuth2\Server\ResourceServer;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Contracts\Encryption\Encrypter;

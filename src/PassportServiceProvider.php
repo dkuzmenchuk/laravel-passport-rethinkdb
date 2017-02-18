@@ -1,27 +1,27 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB;
+namespace dkuzmenchuk\PassportRethinkdb;
 
 use DateInterval;
-use Illuminate\Auth\RequestGuard;
+use dkuzmenchuk\PassportRethinkdb\Bridge\PersonalAccessGrant;
+use dkuzmenchuk\PassportRethinkdb\Bridge\RefreshTokenRepository;
+use dkuzmenchuk\PassportRethinkdb\Guards\TokenGuard;
 use Illuminate\Auth\Events\Logout;
+use Illuminate\Auth\RequestGuard;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Request;
-use dkuzmenchuk\PassportRethinkDB\Guards\TokenGuard;
 use Illuminate\Support\ServiceProvider;
-use League\OAuth2\Server\ResourceServer;
 use League\OAuth2\Server\AuthorizationServer;
 use League\OAuth2\Server\Grant\AuthCodeGrant;
+use League\OAuth2\Server\Grant\ClientCredentialsGrant;
 use League\OAuth2\Server\Grant\ImplicitGrant;
 use League\OAuth2\Server\Grant\PasswordGrant;
-use dkuzmenchuk\PassportRethinkDB\Bridge\PersonalAccessGrant;
 use League\OAuth2\Server\Grant\RefreshTokenGrant;
-use dkuzmenchuk\PassportRethinkDB\Bridge\RefreshTokenRepository;
-use League\OAuth2\Server\Grant\ClientCredentialsGrant;
+use League\OAuth2\Server\ResourceServer;
 
-class PassportServiceProvider extends ServiceProvider
+class PassportRethinkdbServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -30,7 +30,7 @@ class PassportServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'passport');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'passport');
 
         $this->deleteCookieOnLogout();
 
@@ -38,11 +38,11 @@ class PassportServiceProvider extends ServiceProvider
             $this->registerMigrations();
 
             $this->publishes([
-                __DIR__.'/../resources/views' => base_path('resources/views/vendor/passport'),
+                __DIR__ . '/../resources/views' => base_path('resources/views/vendor/passport'),
             ], 'passport-views');
 
             $this->publishes([
-                __DIR__.'/../resources/assets/js/components' => base_path('resources/assets/js/components/passport'),
+                __DIR__ . '/../resources/assets/js/components' => base_path('resources/assets/js/components/passport'),
             ], 'passport-components');
 
             $this->commands([
@@ -54,6 +54,20 @@ class PassportServiceProvider extends ServiceProvider
     }
 
     /**
+     * Register the cookie deletion event handler.
+     *
+     * @return void
+     */
+    protected function deleteCookieOnLogout()
+    {
+        Event::listen(Logout::class, function () {
+            if (Request::hasCookie(Passport::cookie())) {
+                Cookie::queue(Cookie::forget(Passport::cookie()));
+            }
+        });
+    }
+
+    /**
      * Register Passport's migration files.
      *
      * @return void
@@ -61,11 +75,11 @@ class PassportServiceProvider extends ServiceProvider
     protected function registerMigrations()
     {
         if (Passport::$runsMigrations) {
-            return $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+            return $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         }
 
         $this->publishes([
-            __DIR__.'/../database/migrations' => database_path('migrations'),
+            __DIR__ . '/../database/migrations' => database_path('migrations'),
         ], 'passport-migrations');
     }
 
@@ -92,33 +106,37 @@ class PassportServiceProvider extends ServiceProvider
     {
         $this->app->singleton(AuthorizationServer::class, function () {
             return tap($this->makeAuthorizationServer(), function ($server) {
-                $server->enableGrantType(
-                    $this->makeAuthCodeGrant(), Passport::tokensExpireIn()
-                );
+                $server->enableGrantType($this->makeAuthCodeGrant(), Passport::tokensExpireIn());
 
-                $server->enableGrantType(
-                    $this->makeRefreshTokenGrant(), Passport::tokensExpireIn()
-                );
+                $server->enableGrantType($this->makeRefreshTokenGrant(), Passport::tokensExpireIn());
 
-                $server->enableGrantType(
-                    $this->makePasswordGrant(), Passport::tokensExpireIn()
-                );
+                $server->enableGrantType($this->makePasswordGrant(), Passport::tokensExpireIn());
 
-                $server->enableGrantType(
-                    new PersonalAccessGrant, new DateInterval('P1Y')
-                );
+                $server->enableGrantType(new PersonalAccessGrant, new DateInterval('P1Y'));
 
-                $server->enableGrantType(
-                    new ClientCredentialsGrant, Passport::tokensExpireIn()
-                );
+                $server->enableGrantType(new ClientCredentialsGrant, Passport::tokensExpireIn());
 
                 if (Passport::$implicitGrantEnabled) {
-                    $server->enableGrantType(
-                        $this->makeImplicitGrant(), Passport::tokensExpireIn()
-                    );
+                    $server->enableGrantType($this->makeImplicitGrant(), Passport::tokensExpireIn());
                 }
             });
         });
+    }
+
+    /**
+     * Make the authorization service instance.
+     *
+     * @return AuthorizationServer
+     */
+    public function makeAuthorizationServer()
+    {
+        return new AuthorizationServer(
+            $this->app->make(Bridge\ClientRepository::class),
+            $this->app->make(Bridge\AccessTokenRepository::class),
+            $this->app->make(Bridge\ScopeRepository::class),
+            'file://' . Passport::keyPath('oauth-private.key'),
+            'file://' . Passport::keyPath('oauth-public.key')
+        );
     }
 
     /**
@@ -189,22 +207,6 @@ class PassportServiceProvider extends ServiceProvider
     }
 
     /**
-     * Make the authorization service instance.
-     *
-     * @return AuthorizationServer
-     */
-    public function makeAuthorizationServer()
-    {
-        return new AuthorizationServer(
-            $this->app->make(Bridge\ClientRepository::class),
-            $this->app->make(Bridge\AccessTokenRepository::class),
-            $this->app->make(Bridge\ScopeRepository::class),
-            'file://'.Passport::keyPath('oauth-private.key'),
-            'file://'.Passport::keyPath('oauth-public.key')
-        );
-    }
-
-    /**
      * Register the resource server.
      *
      * @return void
@@ -214,7 +216,7 @@ class PassportServiceProvider extends ServiceProvider
         $this->app->singleton(ResourceServer::class, function () {
             return new ResourceServer(
                 $this->app->make(Bridge\AccessTokenRepository::class),
-                'file://'.Passport::keyPath('oauth-public.key')
+                'file://' . Passport::keyPath('oauth-public.key')
             );
         });
     }
@@ -236,7 +238,7 @@ class PassportServiceProvider extends ServiceProvider
     /**
      * Make an instance of the token guard.
      *
-     * @param  array  $config
+     * @param  array $config
      * @return RequestGuard
      */
     protected function makeGuard(array $config)
@@ -250,19 +252,5 @@ class PassportServiceProvider extends ServiceProvider
                 $this->app->make('encrypter')
             ))->user($request);
         }, $this->app['request']);
-    }
-
-    /**
-     * Register the cookie deletion event handler.
-     *
-     * @return void
-     */
-    protected function deleteCookieOnLogout()
-    {
-        Event::listen(Logout::class, function () {
-            if (Request::hasCookie(Passport::cookie())) {
-                Cookie::queue(Cookie::forget(Passport::cookie()));
-            }
-        });
     }
 }

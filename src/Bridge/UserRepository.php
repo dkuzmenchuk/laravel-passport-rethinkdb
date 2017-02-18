@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Bridge;
+namespace dkuzmenchuk\PassportRethinkdb\Bridge;
 
 use RuntimeException;
 use Illuminate\Contracts\Hashing\Hasher;

@@ -1,8 +1,8 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Bridge;
+namespace dkuzmenchuk\PassportRethinkdb\Bridge;
 
-use dkuzmenchuk\PassportRethinkDB\ClientRepository as ClientModelRepository;
+use dkuzmenchuk\PassportRethinkdb\ClientRepository as ClientModelRepository;
 use League\OAuth2\Server\Repositories\ClientRepositoryInterface;
 
 class ClientRepository implements ClientRepositoryInterface
@@ -10,14 +10,14 @@ class ClientRepository implements ClientRepositoryInterface
     /**
      * The client model repository.
      *
-     * @var \dkuzmenchuk\PassportRethinkDB\ClientRepository
+     * @var \dkuzmenchuk\PassportRethinkdb\ClientRepository
      */
     protected $clients;
 
     /**
      * Create a new repository instance.
      *
-     * @param  \dkuzmenchuk\PassportRethinkDB\ClientRepository  $clients
+     * @param  \dkuzmenchuk\PassportRethinkdb\ClientRepository  $clients
      * @return void
      */
     public function __construct(ClientModelRepository $clients)
@@ -58,7 +58,7 @@ class ClientRepository implements ClientRepositoryInterface
     /**
      * Determine if the given client can handle the given grant type.
      *
-     * @param  \dkuzmenchuk\PassportRethinkDB\Client  $record
+     * @param  \dkuzmenchuk\PassportRethinkdb\Client  $record
      * @param  string  $grantType
      * @return bool
      */

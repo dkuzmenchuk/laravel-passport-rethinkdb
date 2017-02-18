@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB;
+namespace dkuzmenchuk\PassportRethinkdb;
 
 use Illuminate\Container\Container;
 
@@ -9,7 +9,7 @@ trait HasApiTokens
     /**
      * The current access token for the authentication user.
      *
-     * @var \dkuzmenchuk\PassportRethinkDB\Token
+     * @var \dkuzmenchuk\PassportRethinkdb\Token
      */
     protected $accessToken;
 
@@ -36,7 +36,7 @@ trait HasApiTokens
     /**
      * Get the current access token being used by the user.
      *
-     * @return \dkuzmenchuk\PassportRethinkDB\Token|null
+     * @return \dkuzmenchuk\PassportRethinkdb\Token|null
      */
     public function token()
     {
@@ -59,7 +59,7 @@ trait HasApiTokens
      *
      * @param  string  $name
      * @param  array  $scopes
-     * @return \dkuzmenchuk\PassportRethinkDB\PersonalAccessTokenResult
+     * @return \dkuzmenchuk\PassportRethinkdb\PersonalAccessTokenResult
      */
     public function createToken($name, array $scopes = [])
     {
@@ -71,7 +71,7 @@ trait HasApiTokens
     /**
      * Set the current access token for the user.
      *
-     * @param  \dkuzmenchuk\PassportRethinkDB\Token  $accessToken
+     * @param  \dkuzmenchuk\PassportRethinkdb\Token  $accessToken
      * @return $this
      */
     public function withAccessToken($accessToken)

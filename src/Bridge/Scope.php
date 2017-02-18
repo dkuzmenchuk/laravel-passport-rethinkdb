@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Bridge;
+namespace dkuzmenchuk\PassportRethinkdb\Bridge;
 
 use League\OAuth2\Server\Entities\Traits\EntityTrait;
 use League\OAuth2\Server\Entities\ScopeEntityInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Middleware;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Middleware;
 
 use Closure;
 use League\OAuth2\Server\ResourceServer;

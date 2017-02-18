@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB;
+namespace dkuzmenchuk\PassportRethinkdb;
 
 use Carbon\Carbon;
 use dkuzmenchuk\RethinkDB\Eloquent\Model;

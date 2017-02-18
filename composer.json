@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "dkuzmenchuk\\Passport\\": "src/"
+            "dkuzmenchuk\\PassportRethinkdb\\": "src/"
         }
     },
     "extra": {

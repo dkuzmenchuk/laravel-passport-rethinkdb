@@ -1,11 +1,11 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Bridge;
+namespace dkuzmenchuk\PassportRethinkdb\Bridge;
 
 use DateTime;
-use dkuzmenchuk\PassportRethinkDB\TokenRepository;
+use dkuzmenchuk\PassportRethinkdb\TokenRepository;
 use Illuminate\Contracts\Events\Dispatcher;
-use dkuzmenchuk\PassportRethinkDB\Events\AccessTokenCreated;
+use dkuzmenchuk\PassportRethinkdb\Events\AccessTokenCreated;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Entities\AccessTokenEntityInterface;
 use League\OAuth2\Server\Repositories\AccessTokenRepositoryInterface;

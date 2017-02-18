@@ -1,6 +1,6 @@
 <?php
 
-use Laravel\Passport\Http\Middleware\CheckForAnyScope as CheckScopes;
+use dkuzmenchuk\PassportRethinkdb\Http\Middleware\CheckForAnyScope as CheckScopes;
 
 class CheckForAnyScopesTest extends PHPUnit_Framework_TestCase
 {
@@ -26,7 +26,7 @@ class CheckForAnyScopesTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException Laravel\Passport\Exceptions\MissingScopeException
+     * @expectedException dkuzmenchuk\PassportRethinkdb\Exceptions\MissingScopeException
      */
     public function test_exception_is_thrown_if_token_doesnt_have_scope()
     {
