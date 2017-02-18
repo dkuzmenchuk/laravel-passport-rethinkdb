@@ -1,6 +1,6 @@
 {
     "name": "dkuzmenchuk/laravel-passport-rethinkdb",
-    "description": "Laravel Passport provides OAuth2 server support to Laravel with RethinkDB adapter.",
+    "description": "Laravel Passport RethinkDB provides OAuth2 server support to Laravel with RethinkDB adapter.",
     "keywords": ["laravel", "passport", "oauth", "rethinkdb"],
     "license": "MIT",
     "authors": [
@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Laravel\\Passport\\": "src/"
+            "dkuzmenchuk\\Passport\\": "src/"
         }
     },
     "extra": {
