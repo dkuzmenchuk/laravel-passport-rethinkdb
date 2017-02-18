@@ -1,10 +1,10 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Bridge;
+namespace dkuzmenchuk\PassportRethinkdb\Bridge;
 
 use Illuminate\Database\Connection;
 use Illuminate\Contracts\Events\Dispatcher;
-use dkuzmenchuk\PassportRethinkDB\Events\RefreshTokenCreated;
+use dkuzmenchuk\PassportRethinkdb\Events\RefreshTokenCreated;
 use League\OAuth2\Server\Entities\RefreshTokenEntityInterface;
 use League\OAuth2\Server\Repositories\RefreshTokenRepositoryInterface;
 

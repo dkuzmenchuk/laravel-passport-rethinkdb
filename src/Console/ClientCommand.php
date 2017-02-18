@@ -1,12 +1,12 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Console;
+namespace dkuzmenchuk\PassportRethinkdb\Console;
 
 use DateTime;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use dkuzmenchuk\PassportRethinkDB\ClientRepository;
-use dkuzmenchuk\PassportRethinkDB\PersonalAccessClient;
+use dkuzmenchuk\PassportRethinkdb\ClientRepository;
+use dkuzmenchuk\PassportRethinkdb\PersonalAccessClient;
 
 class ClientCommand extends Command
 {
@@ -30,7 +30,7 @@ class ClientCommand extends Command
     /**
      * Execute the console command.
      *
-     * @param  \dkuzmenchuk\PassportRethinkDB\ClientRepository  $clients
+     * @param  \dkuzmenchuk\PassportRethinkdb\ClientRepository  $clients
      * @return void
      */
     public function handle(ClientRepository $clients)
@@ -49,7 +49,7 @@ class ClientCommand extends Command
     /**
      * Create a new personal access client.
      *
-     * @param  \dkuzmenchuk\PassportRethinkDB\ClientRepository  $clients
+     * @param  \dkuzmenchuk\PassportRethinkdb\ClientRepository  $clients
      * @return void
      */
     protected function createPersonalClient(ClientRepository $clients)
@@ -75,7 +75,7 @@ class ClientCommand extends Command
     /**
      * Create a new password grant client.
      *
-     * @param  \dkuzmenchuk\PassportRethinkDB\ClientRepository  $clients
+     * @param  \dkuzmenchuk\PassportRethinkdb\ClientRepository  $clients
      * @return void
      */
     protected function createPasswordClient(ClientRepository $clients)
@@ -97,7 +97,7 @@ class ClientCommand extends Command
     /**
      * Create a authorization code client.
      *
-     * @param  \dkuzmenchuk\PassportRethinkDB\ClientRepository  $clients
+     * @param  \dkuzmenchuk\PassportRethinkdb\ClientRepository  $clients
      * @return void
      */
     protected function createAuthCodeClient(ClientRepository $clients)

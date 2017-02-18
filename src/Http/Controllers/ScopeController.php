@@ -1,8 +1,8 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Controllers;
 
-use dkuzmenchuk\PassportRethinkDB\Passport;
+use dkuzmenchuk\PassportRethinkdb\Passport;
 
 class ScopeController
 {

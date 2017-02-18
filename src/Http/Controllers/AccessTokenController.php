@@ -1,9 +1,9 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Controllers;
 
-use dkuzmenchuk\PassportRethinkDB\Passport;
-use dkuzmenchuk\PassportRethinkDB\TokenRepository;
+use dkuzmenchuk\PassportRethinkdb\Passport;
+use dkuzmenchuk\PassportRethinkdb\TokenRepository;
 use Lcobucci\JWT\Parser as JwtParser;
 use Zend\Diactoros\Response as Psr7Response;
 use Psr\Http\Message\ServerRequestInterface;

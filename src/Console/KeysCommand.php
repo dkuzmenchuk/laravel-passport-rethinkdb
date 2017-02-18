@@ -1,9 +1,9 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Console;
+namespace dkuzmenchuk\PassportRethinkdb\Console;
 
 use phpseclib\Crypt\RSA;
-use dkuzmenchuk\PassportRethinkDB\Passport;
+use dkuzmenchuk\PassportRethinkdb\Passport;
 use Illuminate\Console\Command;
 
 class KeysCommand extends Command

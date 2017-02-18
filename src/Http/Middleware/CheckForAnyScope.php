@@ -1,9 +1,9 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Middleware;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Middleware;
 
 use Illuminate\Auth\AuthenticationException;
-use dkuzmenchuk\PassportRethinkDB\Exceptions\MissingScopeException;
+use dkuzmenchuk\PassportRethinkdb\Exceptions\MissingScopeException;
 
 class CheckForAnyScope
 {

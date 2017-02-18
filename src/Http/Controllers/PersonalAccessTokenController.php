@@ -1,11 +1,11 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Http\Controllers;
+namespace dkuzmenchuk\PassportRethinkdb\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use dkuzmenchuk\PassportRethinkDB\Passport;
-use dkuzmenchuk\PassportRethinkDB\PersonalAccessTokenResult;
+use dkuzmenchuk\PassportRethinkdb\Passport;
+use dkuzmenchuk\PassportRethinkdb\PersonalAccessTokenResult;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 
 class PersonalAccessTokenController

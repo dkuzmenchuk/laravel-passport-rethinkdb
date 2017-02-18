@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Events;
+namespace dkuzmenchuk\PassportRethinkdb\Events;
 
 class RefreshTokenCreated
 {

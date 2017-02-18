@@ -1,6 +1,6 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Exceptions;
+namespace dkuzmenchuk\PassportRethinkdb\Exceptions;
 
 use Illuminate\Auth\Access\AuthorizationException;
 

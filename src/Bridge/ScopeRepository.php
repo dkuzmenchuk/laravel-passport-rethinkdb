@@ -1,8 +1,8 @@
 <?php
 
-namespace dkuzmenchuk\PassportRethinkDB\Bridge;
+namespace dkuzmenchuk\PassportRethinkdb\Bridge;
 
-use dkuzmenchuk\PassportRethinkDB\Passport;
+use dkuzmenchuk\PassportRethinkdb\Passport;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Repositories\ScopeRepositoryInterface;
 
